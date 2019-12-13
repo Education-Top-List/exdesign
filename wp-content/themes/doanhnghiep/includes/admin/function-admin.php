@@ -20,8 +20,8 @@ function zang_custom_settings() {
 
 	/* Header Options Section */
 	add_settings_section('zang-header-options', 'Chỉnh sửa header','zang_header_options_callback','zang-settings-header' );
-	add_settings_field('email_hd','Phone Header', 'zang_email_hd','zang-settings-header', 'zang-header-options');
-	add_settings_field('phone_hd','Email Header', 'zang_phone_hd','zang-settings-header', 'zang-header-options');
+	add_settings_field('email_hd','Email Header', 'zang_email_hd','zang-settings-header', 'zang-header-options');
+	add_settings_field('phone_hd','Phone Header', 'zang_phone_hd','zang-settings-header', 'zang-header-options');
 	add_settings_field('day_en','Ngày diễn ra sự kiện', 'zang_day_header_en','zang-settings-header', 'zang-header-options');
 	add_settings_field('day_vi','', 'zang_day_header_vi','zang-settings-header', 'zang-header-options');
 	add_settings_field('address_header_en','Địa chỉ', 'zang_address_header_en','zang-settings-header', 'zang-header-options');

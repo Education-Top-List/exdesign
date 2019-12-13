@@ -21,14 +21,7 @@
 	<meta property="fb:app_id" content="1953938748210615">
 	<meta property="fb:app_admins" content="1993613924220223">
 </head>
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-	var js, fjs = d.getElementsByTagName(s)[0];
-	if (d.getElementById(id)) return;
-	js = d.createElement(s); js.id = id;
-	js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.1&appId=1953938748210615&autoLogAppEvents=1';
-	fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+
 <body <?php body_class() ?>>
 	<div class="bg_opacity"></div>
 	<?php if ( wp_is_mobile() ) { ?>
@@ -57,22 +50,20 @@
 						<h2><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h2>
 					<?php } ?>
 				</div>
-				<div class="address_header">
-					<?php if( get_option('day_header_en') || get_option('day_header_vi') || get_option('address_header_en') || get_option('address_header_vi') ) { ?>
-					<div class="textwidget">
-						<?php if(get_option('day_header_en') || get_option('day_header_vi') ){ ?>
-							<h3><?php if(get_locale() == 'en_US'){echo get_option('day_header_en');} else { echo get_option('day_header_vi');}  ?></h3>
-						<?php }?>
-						<?php if(get_option('address_header_en') || get_option('address_header_vi')){ ?>
-						<p><?php if(get_locale() == 'en_US'){echo get_option('address_header_en');} else { echo get_option('address_header_vi');}  ?></p>
-						<?php }?>	
-					</div>
-				<?php }?>
-				</div>
-				<ul class="site-lang">
+				<div class="tg_lang">
+					<ul class="site-lang">
 						<?php pll_the_languages(array('show_flags'=>1,'show_names'=>0)); ?>
 					</ul>
-				<?php // outputs a flags list (without languages names) ?>
+				</div>
+				<?php if(get_option('email_hd') || get_option('phone_hd')){ ?>
+					<div class="contact_hd">
+						<ul>
+							<li><a href="mailto:<?php echo get_option('email_hd'); ?>"><?php echo get_option('email_hd'); ?></a></li>
+							<li><a href="mailto:<?php echo get_option('phone_hd'); ?>"><?php echo get_option('phone_hd'); ?></a></li>
+						</ul>
+					</div>
+				<?php } ?>
+				
 			</div>
 		</div>
 		<div class="middle_header sticky">

@@ -278,6 +278,7 @@ class Mailer extends MailerAbstract {
 				'type'        => $attachment[4],
 				'filename'    => $attachment[2],
 				'disposition' => $attachment[6],
+				'content_id'  => $attachment[7],
 			);
 		}
 

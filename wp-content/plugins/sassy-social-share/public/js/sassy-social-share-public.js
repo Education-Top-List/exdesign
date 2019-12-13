@@ -7,7 +7,7 @@ function heateorSssDetermineWhatsappShareAPI(a){if(a)return-1!=navigator.userAge
 function heateorSssMoreSharingPopup(elem, postUrl, postTitle, twitterTitle){
 	postUrl = encodeURIComponent(postUrl);
 	concate = '</ul></div><div class="footer-panel"><p></p></div></div>';
-	var heateorSssMoreSharingServices = {
+	var heateorSssMoreSharingServices = {	  
 	  facebook: {
 		title: "Facebook",
 		locale: "en-US",
@@ -258,11 +258,6 @@ function heateorSssMoreSharingPopup(elem, postUrl, postTitle, twitterTitle){
 		title: "Flipboard",
 		locale: "en-US",
 		redirect_url: "https://share.flipboard.com/bookmarklet/popout?v=2&url=" + postUrl + "&title=" + postTitle,
-	  },
-	  mail: {
-		title: "Email",
-		locale: "en-US",
-		redirect_url: "mailto:?subject=" + postTitle + "&body=Link: " + postUrl,
 	  },
 	  pocket: {
 		title: "Pocket",
@@ -519,7 +514,7 @@ function heateorSssMoreSharingPopup(elem, postUrl, postTitle, twitterTitle){
 		locale: "en-US",
 		redirect_url: "//yoolink.to/addorshare?url_value=" + postUrl + "&title=" + postTitle,
 	  }
-	}
+	};
 	var heateorSssMoreSharingServicesHtml = '<button id="heateor_sss_sharing_popup_close" class="close-button separated"><img src="'+ heateorSssCloseIconPath +'" /></button><div id="heateor_sss_sharing_more_content" data-href="'+ decodeURIComponent(postUrl) +'"><div class="filter"><input type="text" onkeyup="heateorSssFilterSharing(this.value.trim())" placeholder="Search" class="search"></div><div class="all-services"><ul class="mini">';
 	for(var i in heateorSssMoreSharingServices){
 		var tempTitle = heateorSssCapitaliseFirstLetter(heateorSssMoreSharingServices[i].title.replace(/[_. ]/g, ""));

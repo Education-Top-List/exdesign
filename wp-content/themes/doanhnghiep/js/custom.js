@@ -130,15 +130,15 @@ jQuery(document).ready(function(){
 					]
 				});
 		// STICKY NAVBAR
-		var sticky = document.querySelector('.sticky');
-		if (sticky.style.position !== 'sticky') {
-			var stickyTop = sticky.offsetTop;
-			document.addEventListener('scroll', function () {
-				window.scrollY >= stickyTop ?
-				sticky.classList.add('fixed_menu') :
-				sticky.classList.remove('fixed_menu');
-			});
-		}
+		// var sticky = document.querySelector('.sticky');
+		// if (sticky.style.position !== 'sticky') {
+		// 	var stickyTop = sticky.offsetTop;
+		// 	document.addEventListener('scroll', function () {
+		// 		window.scrollY >= stickyTop ?
+		// 		sticky.classList.add('fixed_menu') :
+		// 		sticky.classList.remove('fixed_menu');
+		// 	});
+		// }
 		// MENU MOBILE
 		jQuery(".icon_mobile_click").click(function(){
 			jQuery(this).fadeOut(300);
@@ -208,39 +208,12 @@ jQuery(document).ready(function(){
  		 	jQuery(".popup").fadeOut(300);
  		 }
  		});
+			$(window).load(function(){
+	$('#loader').fadeOut(500);
+});
 			var width = jQuery(window).width();
 			if(width>1200){
-				jQuery('.home .address_header, .title_tg_top,.list_post_news .most-commented>li,.list_post_other ul>li,.home .host_patronize, .home .dvi_dtnn, .home .dvi_join, .home .info_ft')
-				.attr({"data-wow-delay" : "0.3s", "data-wow-duration" : "1s"}).addClass("wow animated fadeInUp ");
-				jQuery('.cost_exhibiting .panel-layout>.panel-grid ').attr({"data-wow-delay" : "0.3s", "data-wow-duration" : "1s"}).addClass("wow animated fadeInUp ");
-				jQuery('.home .logo_site').attr({"data-wow-delay" : "0.3s", "data-wow-duration" : "1s"}).addClass("wow animated zoomIn ");
-				jQuery('.register_banner .container>.col-sm-4:nth-child(1)').attr({"data-wow-delay" : "0.5s", "data-wow-duration" : "1s"}).addClass("wow animated zoomIn ");
-				jQuery('.register_banner .container>.col-sm-4:nth-child(2)').attr({"data-wow-delay" : "0.7s", "data-wow-duration" : "1s"}).addClass("wow animated zoomIn ");
-				jQuery('.register_banner .container>.col-sm-4:nth-child(3)').attr({"data-wow-delay" : "0.9s", "data-wow-duration" : "1s"}).addClass("wow animated zoomIn ");
-				jQuery('.list_post_highlight ul>li:nth-child(1)').attr({"data-wow-delay" : "0.3s", "data-wow-duration" : "1s"}).addClass("wow animated zoomIn ");
-				jQuery('.list_post_highlight ul>li:nth-child(2)').attr({"data-wow-delay" : "0.45s", "data-wow-duration" : "1s"}).addClass("wow animated zoomIn ");
-				jQuery('.list_post_highlight ul>li:nth-child(3)').attr({"data-wow-delay" : "0.6s", "data-wow-duration" : "1s"}).addClass("wow animated zoomIn ");
-				jQuery('.list_post_highlight ul>li:nth-child(4)').attr({"data-wow-delay" : "0.75s", "data-wow-duration" : "1s"}).addClass("wow animated zoomIn ");
-				jQuery('.list_post_highlight ul>li:nth-child(5)').attr({"data-wow-delay" : "0.9s", "data-wow-duration" : "1s"}).addClass("wow animated zoomIn ");
-				jQuery('.list_post_highlight ul>li:nth-child(6)').attr({"data-wow-delay" : "1.1s", "data-wow-duration" : "1s"}).addClass("wow animated zoomIn ");
-				jQuery('.home .social_ft ul>li:nth-child(1)').attr({"data-wow-delay" : "0.7s", "data-wow-duration" : "1s"}).addClass("wow animated bounceIn ");
-				jQuery('.home .social_ft ul>li:nth-child(2)').attr({"data-wow-delay" : "0.85s", "data-wow-duration" : "1s"}).addClass("wow animated bounceIn ");
-				jQuery('.home .social_ft ul>li:nth-child(3)').attr({"data-wow-delay" : "1s", "data-wow-duration" : "1s"}).addClass("wow animated bounceIn ");
-				jQuery('.home .social_ft ul>li:nth-child(4)').attr({"data-wow-delay" : "1.15s", "data-wow-duration" : "1s"}).addClass("wow animated bounceIn ");
-				jQuery('.home .social_ft p').attr({"data-wow-delay" : "1.4s", "data-wow-duration" : "1s"}).addClass("wow animated fadeInUp ");
-				jQuery('.home .copyright').attr({"data-wow-delay" : "2s", "data-wow-duration" : "1s"}).addClass("wow animated fadeInUp ");
-		 		jQuery('.page-template-page-template-gioithieu .short_text ').attr({"data-wow-delay" : "0.3s", "data-wow-duration" : "1s"}).addClass("wow animated zoomIn ");
-		 		jQuery('.page-template-page-template-gioithieu .major  .widget-title , .page-template-page-template-gioithieu  .textwidget p  ').attr({"data-wow-delay" : "0.3s", "data-wow-duration" : "1s"}).addClass("wow animated fadeInUp ");
-		 		jQuery('.page-template-page-template-gioithieu .major .panel-layout>.panel-grid:nth-child(2)>.panel-grid-cell:nth-child(1) ')
-		 		.attr({"data-wow-delay" : "0.3s", "data-wow-duration" : "1s"}).addClass("wow animated fadeInUp ");
-		 		jQuery('.page-template-page-template-gioithieu .major .panel-layout>.panel-grid:nth-child(2)>.panel-grid-cell:nth-child(2) ')
-		 		.attr({"data-wow-delay" : "0.5s", "data-wow-duration" : "1s"}).addClass("wow animated fadeInUp ");
-		 		jQuery('.page-template-page-template-gioithieu .major .panel-layout>.panel-grid:nth-child(2)>.panel-grid-cell:nth-child(3) ')
-		 		.attr({"data-wow-delay" : "0.7s", "data-wow-duration" : "1s"}).addClass("wow animated fadeInUp ");
-		 		jQuery('.page-template-page-template-gioithieu .major .panel-layout>.panel-grid:nth-child(2)>.panel-grid-cell:nth-child(4) ')
-		 		.attr({"data-wow-delay" : "0.9s", "data-wow-duration" : "1s"}).addClass("wow animated fadeInUp ");
-		 		jQuery('.page-template-page-template-gioithieu .major .panel-layout>.panel-grid:nth-child(2)>.panel-grid-cell:nth-child(5) ')
-		 		.attr({"data-wow-delay" : "1.1s", "data-wow-duration" : "1s"}).addClass("wow animated fadeInUp ");
+	
 				new WOW().init();
 			}
 			
