@@ -216,5 +216,7 @@ jQuery(document).ready(function(){
 	
 				new WOW().init();
 			}
-			
+			jQuery('.site-lang>li:nth-child(2) a').click(function(e){
+				e.preventDefault();
+			});
 		});

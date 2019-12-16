@@ -256,7 +256,7 @@ add_filter( 'post_row_actions', 'rd_duplicate_post_link', 10, 2 );
 /**
  * URL SITE
  */
-define('BASE_URL', get_site_url('null','/wp-content/themes/doanhnghiep', 'http'));
+define('BASE_URL', get_template_directory_uri());
 
 
 

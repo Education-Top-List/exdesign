@@ -59,7 +59,7 @@
 					<div class="contact_hd">
 						<ul>
 							<li><a href="mailto:<?php echo get_option('email_hd'); ?>"><?php echo get_option('email_hd'); ?></a></li>
-							<li><a href="mailto:<?php echo get_option('phone_hd'); ?>"><?php echo get_option('phone_hd'); ?></a></li>
+							<li><a href="tel:<?php echo get_option('phone_hd'); ?>"><?php echo get_option('phone_hd'); ?></a></li>
 						</ul>
 					</div>
 				<?php } ?>
@@ -86,6 +86,6 @@
 			</div>
 		</div>
 		<?php if(is_front_page() && !is_home()){ ?>
-			<?php echo do_shortcode('[metaslider id="29"]'); ?>
+			<?php echo do_shortcode('[metaslider id="42"]'); ?>
 		<?php }?>
 	</header>

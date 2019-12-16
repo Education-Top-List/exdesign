@@ -4,27 +4,40 @@
 <div class="regis_fixed">
 	<?php if(get_locale() == 'vi') { ?>
 		<ul>
-			<li><a href="<?php echo get_permalink(307);?>">Đăng ký tham quan</a></li>
-			<li><a href="<?php echo get_permalink(107);?>">Đăng ký gian hàng</a></li>
+			<li><a href="<?php echo get_permalink(106);?>">Đăng ký tham quan</a></li>
+			<li><a href="<?php echo get_permalink(100);?>">Đăng ký gian hàng</a></li>
 		</ul>
 	<?php }else{ ?>
 		<ul>
-			<li><a href="<?php echo get_permalink(313);?>">Registration Visitors</a></li>
-			<li><a href="<?php echo get_permalink(110);?>">Booth Registration</a></li>
+			<li><a href="<?php echo get_permalink(147);?>">Registration Visitors</a></li>
+			<li><a href="<?php echo get_permalink(104);?>">Booth Registration</a></li>
 		</ul>
 	<?php }?>
 </div>
 <footer class="footer">
 	<div class="container">
-
-		
-		<div class="copyright">
-			<p>©2019 VIETNAM LIFT AND ELEVATORS EXPO</p>
-		</div>
+		<?php
+		$args = array(
+			'post_type' => 'page',
+          'post__in' => array(74) //list of page_ids
+      );
+		$page_query = new WP_Query( $args );
+		if( $page_query->have_posts() ) :
+        //print any general title or any header here//
+			while( $page_query->have_posts() ) : $page_query->the_post();
+				echo '<div class="page-on-page" id="page_id-' . $post->ID . '">';
+				echo the_content();
+				echo '</div>';
+			endwhile;
+		else:
+        //optional text here is no pages found//
+		endif;
+		wp_reset_postdata();
+		?>
 	</div>
 </footer>
 <div id="loader" >
-     <i class="fa fa-circle-o-notch fa-spin"></i>
+	<i class="fa fa-circle-o-notch fa-spin"></i>
 </div>
 <?php wp_footer(); ?>
 <!-- MESSENGER -->
