@@ -21,11 +21,11 @@
 /** Tên database MySQL */
 define('DB_NAME', 'exdesign');
 /** Username của database */
-define('DB_USER', 'root');
+define('DB_USER', 'exdesign');
 /** Mật khẩu của database */
-define('DB_PASSWORD', '');
+define('DB_PASSWORD', 'exdesignA-=,/.,123%*');
 /** Hostname của database */
-define('DB_HOST', 'localhost');
+define('DB_HOST', '127.0.0.1');
 /** Database charset sử dụng để tạo bảng database. */
 define('DB_CHARSET', 'utf8mb4');
 /** Kiểu database collate. Đừng thay đổi nếu không hiểu rõ. */
