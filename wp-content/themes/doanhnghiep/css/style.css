@@ -1649,6 +1649,15 @@ iframe{
      padding: 45px 0px 20px 0px;
      margin:70px 0px 0px 0px;
      background: #212121;
+     position: relative;
+}
+.footer::before{
+     content:"";
+     position: absolute;
+     width: 100%;
+     height: 15px;
+     bottom: -15px;
+     background: #212121;
 }
 .footer .panel-layout .panel-layout>.panel-grid>.panel-grid-cell:nth-child(1) .textwidget p{
      color:#A0A0A0;
